@@ -1,0 +1,79 @@
+
+// Переменные
+
+$accent: orange; // Accent Color
+$fontsize: 16px; // Body Font Size
+$textcolor: #202020; // Text Color
+$lineheight: 1.65; // Document Line Height
+$userfont: tahoma, sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// Расстояние отступов между колонками бутстрап => $gutter
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+
+// Секция импорта
+
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/_utilities.scss'; // Optional Bootstrap Utilites
+@import "node_modules/bootstrap/scss/bootstrap-grid.scss"; // Optional Bootstrap Grid
+
+// Подключение шрифтов здесь:
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format("woff2");
+  }
+}
+
+@include font("tahoma", normal, 400, "../fonts/tahoma.woff2");
+@include font("tahoma", bold, 700, "../fonts/tahoma-bold.woff2");
+// @include font("roboto", normal, 700, "../fonts/roboto-bold-webfont.woff2");
+// @include font("roboto", italic, 700, "../fonts/roboto-bolditalic-webfont.woff2");
+
+// Глобальные стили:
+
+a {
+  text-decoration: none;
+  color: $textcolor;
+  &:hover, :focus {
+    color: $textcolor;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+input, textarea {
+  outline: none;
+  &:focus:required:invalid {
+    border-color: red;
+  }
+  &:required:valid {
+    border-color: green;
+  }
+}
+
+body {
+  font-family: $userfont;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  color: $textcolor;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+}
