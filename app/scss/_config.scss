@@ -5,7 +5,7 @@ $accent: orange; // Accent Color
 $fontsize: 16px; // Body Font Size
 $textcolor: #202020; // Text Color
 $lineheight: 1.65; // Document Line Height
-$userfont: tahoma, sans-serif; // User Font Family
+$userfont: 'roboto', sans-serif; // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 
 // Расстояние отступов между колонками бутстрап => $gutter
@@ -30,10 +30,9 @@ $gutter: $grid-gutter-width;
   }
 }
 
-@include font("tahoma", normal, 400, "../fonts/tahoma.woff2");
-@include font("tahoma", bold, 700, "../fonts/tahoma-bold.woff2");
-// @include font("roboto", normal, 700, "../fonts/roboto-bold-webfont.woff2");
-// @include font("roboto", italic, 700, "../fonts/roboto-bolditalic-webfont.woff2");
+@include font("roboto", normal, 400, "../fonts/roboto.woff2");
+@include font("roboto", normal, 500, "../fonts/robotobold.woff2");
+@include font("roboto", normal, 700, "../fonts/robotomedium.woff2");
 
 // Глобальные стили:
 
@@ -47,6 +46,8 @@ a {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 ::placeholder {
@@ -76,4 +77,5 @@ body {
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
