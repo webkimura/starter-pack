@@ -1,8 +1,15 @@
-// // Import vendor jQuery plugin example
-// import '~/app/libs/mmenu/dist/mmenu.js'
+// console.log('file 1');
+
+// import '~/app/libs/slick/slick.js'
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
 	// ниже пишем код
+
+	// $('.slider__wrapper').slick({
+	// 	dots: true,
+	// 	autoplay: true,
+	// });
 
 })
