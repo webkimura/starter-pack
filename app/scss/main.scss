@@ -1,8 +1,12 @@
-@use 'sass:math';
-@use 'sass:color';
+@import "config";
 
-@import 'config';
-@import 'blocks/**/*';
-
-
-// Пишем код ниже
+body {
+  display: flex;
+  height: 100vh;
+  background-color: black;
+  font-size: 21px;
+  color: white;
+  h1 {
+    margin: auto auto;
+  }
+}
